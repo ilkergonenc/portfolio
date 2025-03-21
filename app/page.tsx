@@ -1,4 +1,23 @@
+import type { Metadata } from "next"
 import { heroData, aboutData } from "@/app/data"
+
+const metadataTitle =
+  heroData.fullName + " - " + heroData.jobTitle.replace(/<br\s*\/?>/i, " | ")
+
+const metadataDescription = heroData.leadText
+
+export const metadata: Metadata = {
+  title: metadataTitle,
+  description: metadataDescription,
+  openGraph: {
+    title: metadataTitle,
+    description: metadataDescription,
+  },
+  twitter: {
+    title: metadataTitle,
+    description: metadataDescription,
+  },
+}
 
 export default async function Home() {
   await new Promise((resolve) => setTimeout(resolve, 1000))
