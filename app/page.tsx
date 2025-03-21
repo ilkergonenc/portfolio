@@ -1,4 +1,7 @@
 import type { Metadata } from "next"
+import Image from "next/image"
+
+import { ThemeToggle } from "@/components/theme-toggle"
 import { heroData, aboutData } from "@/app/data"
 
 const metadataTitle =
@@ -50,6 +53,34 @@ export default async function Home() {
           aria-label="About Section"
         />
       </main>
+      <footer
+        className="mt-12 text-center flex align-center justify-center gap-4"
+        role="contentinfo"
+        aria-label="Footer Section"
+      >
+        <Image
+          className="dark:invert"
+          src="./icons/github.svg"
+          alt="GitHub logomark"
+          width={20}
+          height={20}
+        />
+        <Image
+          className="dark:invert"
+          src="./icons/linkedin.svg"
+          alt="LinkedIn logomark"
+          width={20}
+          height={20}
+        />
+        <Image
+          className="dark:invert"
+          src="./icons/twitter-x.svg"
+          alt="X (Formerly Twitter) logomark"
+          width={20}
+          height={20}
+        />
+        <ThemeToggle />
+      </footer>
     </div>
   )
 }
