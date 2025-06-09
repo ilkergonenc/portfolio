@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8">
-      <main className="max-w-[65ch] mx-auto w-full space-y-6">
+      <main className="max-w-[65ch] mx-auto w-full space-y-4">
         <div className="min-w-2xl w-full">
           <Skeleton className="h-10 w-[250px] mt-12 mb-8" />
           <Skeleton className="h-8 w-[350px] mb-2" />
